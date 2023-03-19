@@ -33,7 +33,13 @@
         android:layout_height="wrap_content"
         android:text="Gestion Inventaire"
         />
-
+    <ScrollView
+        android:id="@+id/scrollbar"
+        android:layout_below="@id/txtview"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true">
     <ListView
         android:id="@+id/listview"
         android:layout_below="@id/txtview"
@@ -42,11 +48,16 @@
         android:layout_height="400dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbVertical="@android:color/darker_gray"
+        android:scrollbarSize="10dp"
+        android:scrollbarFadeDuration="0"
         />
+    </ScrollView>
 
     <Button
         android:id="@+id/button"
-        android:layout_below="@id/listview"
+        android:layout_below="@id/scrollbar"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
